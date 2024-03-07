@@ -1,9 +1,10 @@
-theme = "pop-dark"
+theme = "ferra"
 
 [editor]
 line-number = "relative"
 
 [keys.normal]
 esc = ["collapse_selection", "keep_primary_selection"]
+
 [editor.cursor-shape]
 insert = "bar"

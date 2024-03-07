@@ -1,5 +1,5 @@
 alias task="python3 ~/projects/the_task_manager/tasks.py"
-
+alias hx='hx -c .hx.conf.toml'
 # cd replacement by zoxide if I donwloaded it
 if command -v zoxide &> /dev/null; then
   echo "using zoxide as cd"
