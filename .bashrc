@@ -1,5 +1,9 @@
 alias task="python3 ~/projects/the_task_manager/tasks.py"
-alias hx='hx -c .hx.conf.toml'
+
+if command -v hx &>/dev/null; then
+  echo 'helix editor configured'
+  alias hx='hx -c ~/.hx.conf.toml'
+fi
 # cd replacement by zoxide if I donwloaded it
 if command -v zoxide &> /dev/null; then
   echo "using zoxide as cd"
@@ -15,4 +19,7 @@ fi
 if command -v tmux &> /dev/null && [ -n "$PS1" ] && [[ ! "$TERM" =~ screen ]] && [[ ! "$TERM" =~ tmux ]] && [ -z "$TMUX" ]; then
   exec tmux
 fi
-
+#print using termux if we are in termux
+if command -v neofetch &> /dev/null; then
+  neofetch
+fi
